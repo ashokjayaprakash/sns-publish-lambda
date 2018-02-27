@@ -1,0 +1,26 @@
+{
+  "name": "sns-publish-lambda",
+  "version": "1.0.0",
+  "description": "AWS lambda function to publish payload data to SNS topic",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run sls:offline",
+    "deploy": "npm run sls:deploy",
+    "sls:deploy": "./node_modules/.bin/sls deploy -v",
+    "sls:offline": "./node_modules/.bin/sls offline"
+  },
+  "devDependencies": {
+    "serverless-offline": "^3.16.0",
+    "serverless-webpack": "^3.1.2",
+    "@types/aws-sdk": "^2.7.0",
+    "@types/node": "^9.3.0",
+    "ts-loader": "^2.3.7",
+    "typescript": "^2.5.2",
+    "webpack": "^3.6.0"
+  },
+  "author": "Ashok JayaPrakash",
+  "license": "MIT",
+  "dependencies": {
+    "aws-sdk": "^2.179.0"
+  }
+}

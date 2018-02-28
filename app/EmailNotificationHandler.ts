@@ -1,6 +1,6 @@
 import * as AWS from "aws-sdk"; // must be npm installed to use
 import {Notification, NotificationHeader, NotificationMessage, NotificationEmail} from "./common/Types";
-import {NOTIFICATION_TOPIC, SOURCE_IDENTIFIER, INTERNAL_SERVER_ERROR, 
+import {NOTIFICATION_TOPIC, INTERNAL_SERVER_ERROR, 
     SUCCESS, BAD_REQUEST, UNSUPPORTED_MEDIA_TYPE} from "./common/Constant";
         
 export class EmailNotificationHandler {
@@ -97,7 +97,7 @@ export class EmailNotificationHandler {
 
         let notificationData: Notification = {
             header: {
-                sourceIdentifier: SOURCE_IDENTIFIER
+                sourceIdentifier: ""
             },
             message: notificationMessage
         }
